@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:id="@+id/linearlayout_cargo_location_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <!-- Consignee Name -->
+            <android.support.design.widget.TextInputLayout
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/input_new_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/consignee_name"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Pick up Location Name -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_pickuplocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/pickup_location"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/pickup_location_marker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_room_black_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/pickup_location_heart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_favorite_black_24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <!-- Pick up Location PIN code -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_pickuplocation_pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/pickup_postal_code"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Pick up Location Date/Time -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_pickup_datetime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/pickup_date_time"
+                        android:inputType="datetime" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Drop up Location Name -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_drop_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/drop_location"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/drop_location_marker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_room_black_24dp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/drop_location_heart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_favorite_black_24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Drop Location PIN code -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_droplocation_pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/drop_postal_code"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Drop Location Date/Time -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_drop_datetime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/drop_date_time"
+                        android:inputType="datetime" />
+
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--linear layout for checkbox, upto radio button-->
+
+        <LinearLayout
+            android:id="@+id/linearlayout_cargo_section"
+            android:visibility="gone"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/bottom_lays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- Check box Full load-->
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox_full_load"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:paddingTop="4dp"
+                    android:text="@string/full_load" />
+
+
+                <!--convered vehicle-->
+                <CheckBox
+                    android:id="@+id/checkBox_convered_vehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:paddingTop="4dp"
+                    android:text="@string/convered_vehicle" />
+
+
+                <!-- Check box Volumetric-->
+                <CheckBox
+                    android:id="@+id/checkBox_Volumetric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:paddingTop="4dp"
+                    android:text="@string/volumetric" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/volumetric_input_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="95dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/input_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/length"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/input_breadth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:hint="@string/breadth"
+                    android:inputType="numberDecimal" />
+
+                <EditText
+                    android:id="@+id/input_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:hint="@string/height"
+                    android:inputType="numberDecimal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- Weight Tons -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_weight_tons"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/weight_tons"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Budget -->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_budget"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/budget"
+                        android:inputType="number" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Vehicle Type -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vehicle_type"
+                    android:textAlignment="gravity"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp" />
+
+            </LinearLayout>
+
+            <!-- Send Request-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp"
+                android:text="@string/send_request_to"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp">
+
+                <RadioButton
+                    android:id="@+id/radio_all_my_transport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="90dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/all_my_transporters" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp">
+
+                <RadioButton
+                    android:id="@+id/radio_Select_Transport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="90dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/select_transporters" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="10dp" />
+            <!-- Way Bill -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/input_waybill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/waybill"
+                    android:inputType="number"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingTop="7dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Remarks -->
+                <EditText
+                    android:id="@+id/input_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:ellipsize="end"
+                    android:ems="10"
+                    android:hint="@string/remarks"
+                    android:inputType="textCapSentences"
+                    android:maxLength="200"
+                    android:singleLine="false"
+                    android:background="@drawable/grey_border"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/bottom_lays">
+    <!--Save Button-->
+    <!--<Button-->
+        <!--android:id="@+id/btn_booking_save"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/save"-->
+        <!--android:textSize="16dip" />-->
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/location_onclick"
+            android:background="@color/LoginAccent"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/btn_view_Tab_location"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/textView"
+                android:layout_toEndOf="@+id/linearLayout"
+                android:layout_toRightOf="@+id/linearLayout"
+                android:background="@drawable/ic_room_black_24dp" />
+
+            <TextView
+                android:id="@+id/textlocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_view_action_location"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/btn_view_action_location"
+                android:text="@string/location_icon"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cargo_onclick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/btn_view_Tab_cargo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/textView"
+                android:layout_toEndOf="@+id/linearLayout"
+                android:layout_toRightOf="@+id/linearLayout"
+                android:background="@drawable/ic_room_black_24dp" />
+
+            <TextView
+                android:id="@+id/textcargo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="@string/cargo_icpn"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/linearlayout_cargo_location_details"
+        android:layout_above="@id/bottom_lays"
+        android:id="@+id/map_fargment"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    </LinearLayout>
+</RelativeLayout>

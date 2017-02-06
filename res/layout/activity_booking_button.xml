@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+  <FrameLayout
+      android:visibility="visible"
+      android:id="@+id/homescreen"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <include
+        android:id="@+id/booking_req"
+        layout="@layout/activity_booking_request" />
+
+    <Button
+        android:id="@+id/btn_booking_next"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text="@string/next_step"
+        android:textSize="16dip" />
+
+  </FrameLayout>
+
+  <LinearLayout
+      android:id="@+id/finalbooking"
+      android:visibility="gone"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <include
+      android:id="@+id/finalstep"
+      layout="@layout/activity_booking_request_final"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:visibility="gone"
+      android:id="@+id/cards_activity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <include
+          android:id="@+id/cards"
+          layout="@layout/activity_card_view"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      android:id="@+id/onclick_card_view">
+    <include
+      android:id="@+id/onclick"
+      layout="@layout/activity_onclick_cardview"/>
+
+  </LinearLayout>
+</LinearLayout>

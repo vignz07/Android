@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <!-- Consignee Name -->
+    <android.support.design.widget.TextInputLayout
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_marginTop="10dp"
+            android:id="@+id/input_new_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/consignee_name"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- Pick up Location Name -->
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:layout_width="640dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:textAppearance="?android:textAppearanceLarge"
+                android:id="@+id/input_pickuplocation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/pickup_location"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pickup_location_marker"
+            android:src="@drawable/ic_room_black"/>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pickup_location_heart"
+            android:src="@drawable/ic_favorite_black_24dp1"/>
+
+    </LinearLayout>
+
+    <!-- Pick up Location PIN code -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp">
+
+        <EditText
+            android:textAppearance="?android:textAppearanceLarge"
+            android:id="@+id/input_pickuplocation_pincode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/pickup_postal_code"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Pick up Location Date/Time -->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp">
+
+        <EditText
+            android:textAppearance="?android:textAppearanceLarge"
+            android:id="@+id/input_pickup_datetime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/pickup_date_time"
+            android:inputType="datetime" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- Drop up Location Name -->
+        <android.support.design.widget.TextInputLayout
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:layout_width="640dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:textAppearance="?android:textAppearanceLarge"
+                android:id="@+id/input_drop_location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/drop_location"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/drop_location_marker"
+            android:src="@drawable/ic_room_black"/>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/drop_location_heart"
+            android:src="@drawable/ic_favorite_black_24dp1"/>
+
+    </LinearLayout>
+
+    <!-- Drop Location PIN code -->
+    <android.support.design.widget.TextInputLayout
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textAppearance="?android:textAppearanceLarge"
+            android:id="@+id/input_droplocation_pincode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/drop_postal_code"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Drop Location Date/Time -->
+    <android.support.design.widget.TextInputLayout
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textAppearance="?android:textAppearanceLarge"
+            android:id="@+id/input_drop_datetime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/drop_date_time"
+            android:inputType="datetime" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Check box Full load-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkBox_full_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="400dp"
+            android:layout_weight="0.01" />
+
+        <TextView
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:paddingTop="4dp"
+            android:text="@string/full_load" />
+
+    </LinearLayout>
+
+    <!-- Check box convered vehicle-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_below="@+id/check1">
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkBox_convered_vehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="400dp"
+            android:layout_weight="0.01" />
+
+        <TextView
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:paddingTop="4dp"
+            android:text="@string/convered_vehicle" />
+
+    </LinearLayout>
+
+    <!-- Check box Volumetric-->
+    <LinearLayout
+        android:id="@+id/check3"
+        android:layout_below="@+id/check2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/checkBox_Volumetric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="400dp"
+            android:layout_weight="0.01" />
+
+        <TextView
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:paddingTop="4dp"
+            android:text="@string/volumetric" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Input_volumetric"
+        android:layout_below="@+id/check3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="95dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <EditText
+            android:textAppearance="?android:textAppearanceLarge"
+            android:id="@+id/input_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/length"
+            android:inputType="numberDecimal"
+            android:layout_weight="0.33" />
+
+        <EditText
+            android:textAppearance="?android:textAppearanceLarge"
+            android:id="@+id/input_breadth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:hint="@string/breadth"
+            android:inputType="numberDecimal"
+            android:layout_weight="0.33" />
+
+        <EditText
+            android:textAppearance="?android:textAppearanceLarge"
+            android:id="@+id/input_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:hint="@string/height"
+            android:inputType="numberDecimal"
+            android:layout_weight="0.33" />
+    </LinearLayout>
+
+</LinearLayout>
